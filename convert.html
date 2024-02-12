@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Voice Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Enter Text to Convert to Voice</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <textarea class="form-control mb-3" id="textInput" rows="5" placeholder="Enter text here..."></textarea>
+                <button class="btn btn-primary btn-lg d-block mx-auto mb-3" id="convertButton">Convert</button>
+                <audio controls id="audioElement" class="d-block mx-auto" style="max-width: 100%;"></audio>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript for text-to-speech conversion -->
+    <script>
+        $(document).ready(function() {
+            $('#convertButton').click(function() {
+                var text = $('#textInput').val().trim();
+                if (text !== '') {
+                    // Use JavaScript code for text-to-speech conversion here
+                    // This is just a placeholder
+                    alert('Text-to-Speech conversion will happen here.');
+                } else {
+                    alert('Please enter some text.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
